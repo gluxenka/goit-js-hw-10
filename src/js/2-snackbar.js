@@ -8,7 +8,6 @@ const delayInput = document.querySelector('input[name="delay"]');
 
 function showSuccessMessage(delay) {
   iziToast.success({
-    timeout: false,
     message: `✅ Fulfilled promise in ${delay}ms`,
     position: 'topRight',
     iconColor: '#FFF',
@@ -21,7 +20,6 @@ function showSuccessMessage(delay) {
 
 function showErrorMessage(delay) {
   iziToast.error({
-    timeout: false,
     message: `❌ Rejected promise in ${delay}ms`,
     position: 'topRight',
     iconColor: '#FFF',
