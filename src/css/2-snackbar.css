@@ -1,0 +1,16 @@
+.form {
+  max-width: 360px;
+}
+.form fieldset {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  border-radius: 4px;
+
+  margin-top: 16px;
+}
+
+button[type='submit'] {
+  width: 100%;
+  margin-top: 24px;
+}
