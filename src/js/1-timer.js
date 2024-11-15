@@ -27,7 +27,6 @@ const FLATPICKR_PICKER_OPTIONS = {
     } else {
       switchDisable(startButton, true);
       iziToast.error({
-        timeout: false,
         message: invalidDateMessage,
         position: 'topRight',
         iconColor: '#FFF',
