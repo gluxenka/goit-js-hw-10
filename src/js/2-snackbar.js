@@ -3,6 +3,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 import iziToast from 'izitoast';
 
 const form = document.querySelector('.form');
+const radioButtons = document.querySelectorAll('input[name="state"]');
+const delayInput = document.querySelector('input[name="delay"]');
 
 function showSuccessMessage(delay) {
   iziToast.success({
@@ -63,6 +65,15 @@ function handleSubmit(event) {
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
   createNotification(formValues.state, Number(formValues.delay));
+  resetForm();
+}
+
+function resetForm() {
+  radioButtons.forEach(button => {
+    button.checked = false;
+  });
+
+  delayInput.value = '';
 }
 
 function init() {
